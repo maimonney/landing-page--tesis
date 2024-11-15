@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="bg-[#222725] text-white py-4 text-center">
+    <header class="fixed top-0 left-0 right-0 bg-[#222725] text-white py-4 text-center">
         <nav class="flex justify-around">
             <div class="flex">
                 <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png" alt="Logo de Arcana" width="150">
@@ -25,19 +25,20 @@
         </nav>
     </header>
 
-    <section class="py-12 text-center">
+    <section class="py-12 text-center bg-cover bg-center text-white" style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1'); height: 100vh; height: 100vh;">
+       <div class="flex flex-col justify-center items-center h-screen">
         <h1>Arcana</h1>
-        <p class="max-w-2xl mx-auto">Descubrí los secretos mejor guardados de Argentina con Arcana</p>
+        <p class="max-w-2xl mx-auto mb-8">Descubrí los secretos mejor guardados de Argentina con Arcana</p>
+        <butto class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Descarga</button>
+       </div>
     </section>
 
-    <section class="py-12 text-center">
+    <section class="py-12 text-center mt-32 mb-32">
         <h2 class="text-2xl font-semibold mb-4">¿Cómo Funciona la App?</h2>
         <P class="max-w-2xl mx-auto">Arcana es tu compañero ideal para explorar Argentina de una manera única y emocionante. Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y divertido.</P>
-        <button
-            class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Descargar</button>
     </section>
 
-    <section class="bg-gray-100 py-12">
+    <section class="py-12 mt-32 mb-32 text-center bg-cover bg-center" style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1');">
         <div class="container mx-auto text-center">
             <h2 class="text-2xl font-semibold mb-6">Características</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -58,7 +59,7 @@
         </div>
     </section>
 
-    <section class="py-12 text-center bg-[#9da399]" id="preguntas">
+    <section class="py-12 text-center bg-[#9da399]" id="preguntas mt-32 mb-32">
         <h2 class="text-2xl font-semibold mb-6">Preguntas Frecuentes</h2>
         <div class="section-ajustada">
             <!-- Accordion Item 1 -->
@@ -193,7 +194,7 @@
         </div>
     </section>
 
-    <section class="py-12 text-center">
+    <section class="py-12 text-center mt-32 mb-32">
         
         <div id="successMessage"
             class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden">
