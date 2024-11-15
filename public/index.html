@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,48 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
 
     <!-- Sección de encabezado -->
-    <header class="bg-blue-600 text-white py-4 text-center">
-        <h1 class="text-3xl font-bold">Bienvenido a la App de Tratamiento del TOC</h1>
-        <p class="mt-2">Lleva un seguimiento eficaz de tu tratamiento, registra tus síntomas y mejora tu bienestar.</p>
+    <header class="bg-[#222725] text-white py-4 text-center">
+        <nav class="flex justify-around">
+            <div>
+                <img src="" alt="Logo de Arcana">
+                <h1>Arcana</h1>
+            </div>
+            <ul class="flex">
+                <li>Inicio</li>
+                <li>Preguntas frecuentes</li>
+                <li>Descarga</li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Sección de descripción de la app -->
     <section class="py-12 text-center">
         <h2 class="text-2xl font-semibold mb-4">¿Cómo Funciona la App?</h2>
-        <p class="max-w-2xl mx-auto">Nuestra aplicación te permite registrar tus síntomas, realizar ejercicios de terapia cognitivo-conductual (TCC) y obtener reportes sobre tu progreso a lo largo del tiempo. Además, te recordará las horas de medicación y terapia.</p>
+        <p class="max-w-2xl mx-auto">Descubrí los secretos mejor guardados de Argentina con Arcana</p>
+        <P class="max-w-2xl mx-auto">Arcana es tu compañero ideal para explorar Argentina de una manera única y emocionante. Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y divertido.</P>
+        <button class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Descargar</button>
     </section>
 
     <!-- Sección de funcionalidades -->
     <section class="bg-gray-100 py-12">
         <div class="container mx-auto text-center">
-            <h2 class="text-2xl font-semibold mb-6">Características Clave</h2>
+            <h2 class="text-2xl font-semibold mb-6">Características</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Registro de Síntomas</h3>
-                    <p>Monitorea tus síntomas y comportamientos a lo largo del tiempo.</p>
+                    <h3 class="font-semibold text-xl">Descubrir destinos</h3>
+                    <p>Explora una amplia variedad de lugares, desde los más populares hasta los más ocultos.</p>
                 </div>
                 <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Terapia Cognitivo-Conductual</h3>
-                    <p>Accede a ejercicios y pautas de terapia para controlar el TOC.</p>
+                    <h3 class="font-semibold text-xl">Reservar todo en un solo lugar</h3>
+                    <p> Vuelos, alojamientos y actividades, todo organizado para ti.</p>
                 </div>
                 <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Reportes Detallados</h3>
-                    <p>Visualiza tu progreso con gráficos y análisis de tus patrones.</p>
+                    <h3 class="font-semibold text-xl">Apoyar el turismo local</h3>
+                    <p>Trabajamos con empresas argentinas para ofrecerte experiencias auténticas y ayudar al crecimiento de las comunidades locales.</p>
                 </div>
             </div>
         </div>
@@ -47,14 +60,7 @@
     <section class="py-12 text-center bg-gray-200">
         <h2 class="text-2xl font-semibold mb-6">Preguntas Frecuentes</h2>
         <div class="max-w-2xl mx-auto">
-            <div class="mb-6">
-                <h3 class="font-semibold">¿Es gratuita la app?</h3>
-                <p>La app tiene una versión gratuita con funciones básicas y una versión premium con características adicionales.</p>
-            </div>
-            <div class="mb-6">
-                <h3 class="font-semibold">¿Cómo puedo contactar al profesional a cargo?</h3>
-                <p>Dentro de la app puedes tener contacto directo con el profesional mediante la opción de "Soporte".</p>
-            </div>
+            
         </div>
     </section>
 
@@ -66,10 +72,12 @@
             <input type="text" id="name" name="name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
 
             <label for="email" class="block text-left">Correo Electrónico</label>
-            <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
+            <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
+                required>
 
             <label for="message" class="block text-left">Mensaje</label>
-            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required></textarea>
+            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
+                required></textarea>
 
             <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Enviar</button>
         </form>
@@ -77,10 +85,11 @@
 
     <!-- Sección de Footer -->
     <footer class="bg-blue-600 text-white text-center py-4">
-        <p>&copy; 2024 Mi App de Tratamiento del TOC. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Arcana. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Scripts -->
     <script src="js/app.js"></script>
 </body>
+
 </html>
