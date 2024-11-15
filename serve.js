@@ -1,7 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 const app = express();
-const PORT = 3000;
+
+const port = process.env.PORT;
+const passMail = process.env.CLAVE_MAIL;
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +15,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: 'mailen.monney@davinci.edu.ar',
-    pass: 'ifhlttgrflupkkyt',
+    pass: passMail,
   },
   tls: {
     rejectUnauthorized: false,
@@ -105,6 +108,6 @@ const mailToUser = {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor funcionando en http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Servidor funcionando en http://localhost:${port}`);
 });
