@@ -40,7 +40,7 @@ app.post('/contact', (req, res) => {
         text: `Mensaje de ${name} (${email}):\n\n${message}`,
         html: `
         <div style="font-family: Arial, sans-serif; color: #333; background-color: #f9fafb; padding: 20px;">
-            <div style="background-color: #ffffff; border-radius: 8px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: #222725; border-radius: 8px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                 <div style="background-color: #222725; color: white; padding: 10px; text-align: center; border-radius: 8px 8px 0 0;">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Logo Arcana" style="width: 150px; height: auto;">
                     <h1>Nuevo mensaje de ${name}</h1>
@@ -63,7 +63,7 @@ app.post('/contact', (req, res) => {
         text: `Hola ${name},\n\nTu mensaje ha sido recibido correctamente. A continuación, te mostramos la información que enviaste:\n\nNombre: ${name}\nCorreo: ${email}\nMensaje: ${message}`,
         html: `
         <div style="font-family: Arial, sans-serif; color: #333; background-color: #f9fafb; padding: 20px;">
-            <div style="background-color: #ffffff; border-radius: 8px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: #222725; border-radius: 8px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                 <div style="background-color: #222725; color: white; padding: 10px; text-align: center; border-radius: 8px 8px 0 0;">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Logo Arcana" style="width: 150px; height: auto;">
                     <h1>Confirmación de mensaje</h1>
