@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Sableklish';
+  src: url('./fonts/Sableklish.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1, h2 {
+  font-family: 'Sableklish', sans-serif;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+}
+
+
 .section-ajustada {
     width: 70%;
     margin: 0 auto;
@@ -10,3 +27,23 @@
   #successMessage {
     transition: opacity 0.3s ease-in-out;
   }
+
+  .bg-image-fondo {
+    position: relative; 
+    overflow: hidden;   
+}
+
+.bg-image-fondo::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/patrones_1.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; 
+    z-index: -1; 
+}
+

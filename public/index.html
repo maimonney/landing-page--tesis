@@ -1,69 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Promociona tu app para el control del tratamiento del TOC.">
     <title>Arcana</title>
     <link rel="stylesheet" href="css/estilo.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-
-    <header class="fixed top-0 left-0 right-0 bg-[#222725] text-white py-4 text-center">
-        <nav class="flex justify-around">
-            <div class="flex">
-                <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png" alt="Logo de Arcana" width="150">
+    <!-- Header -->
+    <header id="main-header"
+        class="fixed top-0 left-0 right-0 bg-transparent text-white py-4 z-50 transition duration-300">
+        <nav class="container mx-auto flex items-center justify-between px-6">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#Inicio">
+                    <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png"
+                        alt="Logo de Arcana" class="h-12">
+                </a>
             </div>
-            <ul class="flex">
-                <li class="m-2"><a href="index.html">Inicio</a></li>
-                <li class="m-2"><a href="#preguntas">Preguntas frecuentes</a></li>
-                <li class="m-2"> <butto class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Descarga</button></li>
+            <!-- Menú -->
+            <ul class="flex items-center space-x-6">
+                <li><a href="#Inicio" class="hover:text-[#788B69] transition duration-300">Inicio</a></li>
+                <li><a href="#ComoFunciona" class="hover:text-[#788B69] transition duration-300">¿Cómo funnciona?</a>
+                <li><a href="#Características" class="hover:text-[#788B69] transition duration-300">Características</a>
+                <li><a href="#Preguntas" class="hover:text-[#788B69] transition duration-300">Preguntas frecuentes</a>
+                <li><a href="#Contacto" class="hover:text-[#788B69] transition duration-300">Contacto</a>
+                </li>
+                <li>
+                    <button
+                        class="px-6 py-3 font-semibold text-white bg-[#3C4A28] rounded-full hover:bg-[#788B69] transition duration-300">Descarga
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section class="py-12 text-center bg-cover bg-center text-white" style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1'); height: 100vh; height: 100vh;">
-       <div class="flex flex-col justify-center items-center h-screen">
-        <h1>Arcana</h1>
-        <p class="max-w-2xl mx-auto mb-8">Descubrí los secretos mejor guardados de Argentina con Arcana</p>
-        <butto class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Descarga</button>
-       </div>
-    </section>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-opacity-70', 'bg-black');
+                } else {
+                    header.classList.remove('bg-opacity-70', 'bg-black');
+                }
+            });
+        });
+    </script>
 
-    <section class="py-12 text-center mt-32 mb-32">
-        <h2 class="text-2xl font-semibold mb-4">¿Cómo Funciona la App?</h2>
-        <P class="max-w-2xl mx-auto">Arcana es tu compañero ideal para explorar Argentina de una manera única y emocionante. Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y divertido.</P>
-    </section>
 
-    <section class="py-12 mt-32 mb-32 text-center bg-cover bg-center" style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1');">
-        <div class="container mx-auto text-center">
-            <h2 class="text-2xl font-semibold mb-6">Características</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Descubrir destinos</h3>
-                    <p>Explora una amplia variedad de lugares, desde los más populares hasta los más ocultos.</p>
-                </div>
-                <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Reservar todo en un solo lugar</h3>
-                    <p> Vuelos, alojamientos y actividades, todo organizado para ti.</p>
-                </div>
-                <div class="bg-white p-6 shadow-lg rounded-lg">
-                    <h3 class="font-semibold text-xl">Apoyar el turismo local</h3>
-                    <p>Trabajamos con empresas argentinas para ofrecerte experiencias auténticas y ayudar al crecimiento
-                        de las comunidades locales.</p>
-                </div>
-            </div>
+<!-- Banner -->
+<section class="relative bg-cover bg-center text-white" id="Inicio"
+    style="background-image: url('./img/banner_landing.jpg'); height: 100vh;">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <div class="relative flex flex-col justify-center items-center h-full px-12">
+        
+        <!-- Texto centrado -->
+        <h1 class="text-5xl mb-4 text-center">Arcana</h1>
+        <p class="text-lg max-w-lg mb-6 text-center leading-relaxed">
+            Descubrí los secretos mejor guardados de Argentina. Explora destinos únicos y vive experiencias inolvidables con Arcana.
+        </p>
+        <button class="px-8 py-4 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69] 
+            transition duration-300">
+            Descarga ahora
+        </button>
+    </div>
+</section>
+
+
+
+
+    <!-- Info -->
+    <section class="py-5 mt-10 mb-10 flex items-center justify-center space-x-12" id="ComoFunciona">
+        <div>
+            <h2 class="text-3xl  text-[#3C4A28] mb-6 text-left">¿Cómo Funciona la App?</h2>
+            <p class="text-lg text-gray-600 leading-relaxed tracking-wide max-w-xl mx-auto sm:mx-0">
+                Arcana es tu compañero ideal para explorar Argentina de una manera única y emocionante.
+                Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda
+                a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y
+                divertido.
+            </p>
+        </div>
+        <div class="max-w-xs">
+            <img src="./img/pantallas.png" alt="Celular" class="w-full">
         </div>
     </section>
 
-    <section class="py-12 text-center bg-[#9da399]" id="preguntas mt-32 mb-32">
-        <h2 class="text-2xl font-semibold mb-6">Preguntas Frecuentes</h2>
+
+    </section>
+
+
+<!--tarjetas info--> 
+<section class="py-16 mt-32 text-center bg-cover bg-center bg-fixed" id="Características"
+    style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1');">
+    <div class="container mx-auto text-center mb-32 mt-32">
+        <h2 class="text-3xl  text-white mb-20">Características</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tarjeta 1 -->
+            <div class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                <h3 class="font-semibold text-xl text-[#3C4A28] mb-4">Descubrir destinos</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">Explora una amplia variedad de lugares, desde los más populares hasta los más ocultos.</p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                <h3 class="font-semibold text-xl text-[#3C4A28] mb-4">Reservar todo en un solo lugar</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">Vuelos, alojamientos y actividades, todo organizado para ti.</p>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                <h3 class="font-semibold text-xl text-[#3C4A28] mb-4">Apoyar el turismo local</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">Trabajamos con empresas argentinas para ofrecerte experiencias auténticas y ayudar al crecimiento de las comunidades locales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--Preguntas frecuentes-->
+    <section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
+        <h2 class="text-3xl text-[#3C4A28] mb-6 ">Preguntas Frecuentes</h2>
         <div class="section-ajustada">
             <!-- Accordion Item 1 -->
-            <div class="border-b border-[#222725]">
+            <div class="border-b border-[#475c54]">
                 <button onclick="toggleAccordion(1)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
                     <h3>1. ¿Qué es Arcana?</h3>
@@ -194,37 +261,67 @@
         </div>
     </section>
 
-    <section class="py-12 text-center mt-32 mb-32">
-        
+    <section class="py-12 text-center relative bg-image-fondo" id="Contacto">
+        <!-- Mensaje de éxito -->
         <div id="successMessage"
             class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden">
             <p>¡Mensaje enviado con éxito!</p>
         </div>
-
-        <h2 class="text-2xl font-semibold mb-6">Contáctanos</h2>
+    
+        <h2 class="text-3xl font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
         <form id="contactForm" action="/contact" method="POST"
-            class="max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
+            class="max-w-lg mx-auto bg-white bg-opacity-80 p-6 shadow-lg rounded-lg">
             <label for="name" class="block text-left">Nombre</label>
             <input type="text" id="name" name="name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
-
+    
             <label for="email" class="block text-left">Correo Electrónico</label>
-            <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
-                required>
-
+            <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
+    
             <label for="message" class="block text-left">Mensaje</label>
-            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
-                required></textarea>
-
+            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required></textarea>
+    
             <button type="submit"
                 class="px-6 py-3 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69]">Enviar</button>
         </form>
-
     </section>
-
-    <footer class="bg-[#222725] text-white text-center py-4">
-        <p>&copy; 2024 Arcana. Todos los derechos reservados.</p>
+    
+    <footer class="bg-[#222725] text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+                 
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <img src="./img/icono_arcana.png" alt="Logo Arcana" class="h-20">
+                    
+                </div>
+                <div class="flex space-x-6 justify-center md:justify-end">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" target="_blank" class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+    
+                    <!-- Twitter -->
+                    <a href="https://twitter.com" target="_blank" class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+    
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+    
+                    <!-- Google Play -->
+                    <a href="https://play.google.com" target="_blank" class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-google-play text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-gray-400">
+                <p class="text-sm">&copy; 2024 Arcana. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
-
+    
+    
     <script src="js/script.js"></script>
 </body>
 
