@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
-  //res.redirect('/?success=false');
+  res.redirect('/?success=false');
 });
 
 app.post('/contact', (req, res) => {
