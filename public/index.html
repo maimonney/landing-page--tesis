@@ -60,7 +60,7 @@
     <!-- Banner -->
     <section class="relative bg-cover bg-center text-white" id="Inicio"
         style="background-image: url('./img/banner_landing.jpg'); height: 100vh;">
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         <div class="relative flex flex-col justify-center items-center h-full px-12">
 
             <!-- Texto centrado -->
@@ -277,6 +277,12 @@
 
 
     <section class="py-12 text-center relative bg-image-fondo" id="Contacto">
+         <!-- Mensaje de éxito -->
+         <div id="successMessage"
+         class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden">
+         <p>¡Mensaje enviado con éxito!</p>
+     </div>
+
       <h2 class="text-3xl font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
         <form id="contactForm" action="/contact" method="POST"
             class="max-w-lg mx-auto bg-white bg-opacity-80 p-6 shadow-lg rounded-lg">

@@ -31,21 +31,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('form').reset();
   }
-
-  // Spinner Logic
-  const form = document.getElementById('contactForm');
-  const spinner = document.getElementById('spinner');
-  const successMessage = document.getElementById('successMessage');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault(); 
-    spinner.classList.remove('hidden');
-    successMessage.classList.add('hidden'); 
-
-    setTimeout(() => {
-      spinner.classList.add('hidden'); 
-      successMessage.classList.remove('hidden'); 
-      form.reset(); 
-    }, 2000);
-  });
 });
+
