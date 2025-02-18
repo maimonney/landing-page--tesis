@@ -2,39 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fuente personalizada */
 @font-face {
-  font-family: 'Sableklish';
-  src: url('../fonts/Sableklish.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Sableklish';
+    src: url('../fonts/Sableklish.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
+/* Estilos para los títulos */
 h1, h2 {
-  font-family: 'Sableklish', sans-serif;
+    font-family: 'Sableklish', sans-serif;
+    font-size: 50px !important;
 }
 
+/* Estilos para los párrafos */
 p {
-  font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-
+/* Ajustes para la sección de preguntas frecuentes */
 .section-ajustada {
     width: 70%;
     margin: 0 auto;
-  }
+}
 
-  #successMessage {
+/* Mensaje de éxito */
+#successMessage {
     transition: opacity 0.3s ease-in-out;
-  }
+}
 
-  .bg-image-fondo {
-    position: relative; 
-    overflow: hidden;   
+/* Fondo con imagen y opacidad */
+.bg-image-fondo {
+    position: relative;
+    overflow: hidden;
 }
 
 .bg-image-fondo::before {
-    content: ''; 
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -43,32 +48,126 @@ p {
     background-image: url('/img/patrones_1.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.1; 
-    z-index: -1; 
+    opacity: 0.1;
+    z-index: -1;
 }
 
-
+/* Spinner de carga */
 .spinner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem; /* Ajusta el espaciado si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .spinner {
-  width: 32px; /* Tamaño del círculo */
-  height: 32px;
-  border: 4px solid transparent; /* Hace que el círculo sea hueco */
-  border-top-color: #3C4A28; /* Color de la parte visible */
-  border-radius: 50%; /* Hace que sea circular */
-  animation: spin 1s linear infinite; /* Animación giratoria */
+    width: 32px;
+    height: 32px;
+    border: 4px solid transparent;
+    border-top-color: #3C4A28;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+/* Estilos responsive */
+@media (max-width: 640px) {
+    #Inicio h1 {
+        font-size: 2rem;
+    }
+
+    #Inicio p {
+        font-size: 1rem;
+    }
+
+    #Inicio button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #Preguntas h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #Preguntas .section-ajustada {
+        padding: 0 1rem;
+    }
+}
+
+/* Ajustes para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+#menu.menu-open {
+  background-color: #3C4A28;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+#menu.menu-open {
+  transform: translateX(0);
+}
+
+#menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#menu-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu.menu-open a {
+  color: white;
+  padding: 0.75rem 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: block;
+}
+
+#menu.menu-open a:hover {
+  color: #788B69;
+}
+
+#menu.menu-open button {
+  margin-top: 1rem;
+  background-color: #788B69;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+

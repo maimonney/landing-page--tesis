@@ -7,10 +7,11 @@
     <meta name="description" content="Promociona tu app para el control del tratamiento del TOC.">
     <title>Arcana</title>
     <link rel="stylesheet" href="/css/estilo.css">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Agrega Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -45,6 +46,7 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Header con scroll
             const header = document.getElementById('main-header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -53,8 +55,42 @@
                     header.classList.remove('bg-opacity-70', 'bg-black');
                 }
             });
+
+            // Menú hamburguesa
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+            const menuClose = document.getElementById('menu-close');
+
+            // Abrir el menú
+            menuToggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('menu-open'); // Agrega o quita la clase "menu-open"
+            });
+
+            // Cerrar el menú
+            menuClose.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('menu-open'); // Oculta el menú
+            });
         });
+        // Acordeón
+        function toggleAccordion(index) {
+            const content = document.getElementById('content-' + index);
+            const icon = document.getElementById('icon-' + index);
+
+            if (content.classList.contains('max-h-0')) {
+                content.classList.remove('max-h-0');
+                content.classList.add('max-h-96');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.remove('max-h-96');
+                content.classList.add('max-h-0');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
     </script>
+
 
     <!-- Banner -->
     <section class="relative bg-cover bg-center text-white" id="Inicio"
@@ -63,7 +99,7 @@
         <div class="relative flex flex-col justify-center items-center h-full px-12">
 
             <!-- Texto centrado -->
-            <h1 class="text-5xl mb-4 text-center">Arcana</h1>
+            <h1 class=" mb-4 text-center">Arcana</h1>
             <p class="text-lg max-w-lg mb-6 text-center leading-relaxed">
                 Descubrí los secretos mejor guardados de Argentina. Explora destinos únicos y vive experiencias
                 inolvidables con Arcana.
@@ -75,23 +111,30 @@
         </div>
     </section>
 
+
+
+
     <!-- Info -->
-    <section class="py-5 mt-10 mb-10 flex items-center justify-center space-x-12" id="ComoFunciona">
-        <div>
-            <h2 class="text-3xl  text-[#3C4A28] mb-6 text-left">¿Cómo Funciona la App?</h2>
-            <p class="text-lg text-gray-600 leading-relaxed tracking-wide max-w-xl mx-auto sm:mx-0">
+    <section
+        class="py-5 mt-10 mb-10 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12"
+        id="ComoFunciona">
+        <div class="sm:w-1/2 px-4">
+            <h2 class="text-xl sm:text-2xl text-[#3C4A28] mb-6 text-left font-semibold">¿Cómo Funciona la App?</h2>
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed tracking-wide max-w-xl sm:mx-0">
                 Arcana es tu compañero ideal para explorar Argentina de una manera única y emocionante.
                 Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda
                 a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y
                 divertido.
             </p>
         </div>
-        <div class="max-w-xs">
+        <div class="sm:w-1/2 max-w-xs">
             <img src="./img/pantallas.png" alt="Celular" class="w-full">
         </div>
     </section>
 
-    </section>
+
+
+
 
     <!-- Caracteristicas -->
     <section class="py-16 mt-32 text-center bg-cover bg-center bg-fixed relative" id="Características"
@@ -99,42 +142,59 @@
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
         <div class="relative container mx-auto text-center mb-32 mt-32">
-            <h2 class="text-3xl text-white mb-20">Características</h2>
+            <h2 class=" text-white mb-20">Características</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Tarjeta 1 -->
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-map-marked-alt text-2xl"></i>
+                        </div>
+                    </div>
                     <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Descubrir destinos</h3>
                     <p class="text-gray-700 text-lg leading-relaxed text-left">Explora una amplia variedad de lugares,
-                        desde los
-                        más populares hasta los más ocultos.</p>
+                        desde
+                        los más populares hasta los más ocultos.</p>
                 </div>
 
                 <!-- Tarjeta 2 -->
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-plane text-2xl"></i>
+                        </div>
+                    </div>
                     <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Reservar todo en un solo lugar
                     </h3>
                     <p class="text-gray-700 text-lg leading-relaxed text-left">Vuelos, alojamientos y actividades, todo
-                        organizado
-                        para ti.</p>
+                        organizado para ti.</p>
                 </div>
 
                 <!-- Tarjeta 3 -->
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                    </div>
                     <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Apoyar el turismo local</h3>
                     <p class="text-gray-700 text-lg leading-relaxed text-left">Trabajamos con empresas argentinas para
-                        ofrecerte
-                        experiencias auténticas y ayudar al crecimiento de las comunidades locales.</p>
+                        ofrecerte experiencias auténticas y ayudar al crecimiento de las comunidades locales.</p>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+
+
     <!--Preguntas frecuentes-->
     <section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
-        <h2 class="text-3xl text-[#3C4A28] mb-6">Preguntas Frecuentes</h2>
+        <h2 class=" text-[#3C4A28] mb-6">Preguntas Frecuentes</h2>
         <div class="section-ajustada">
             <!-- Accordion Item 1 -->
             <div class="border-b border-[#475c54]">
@@ -278,7 +338,7 @@
             <p>¡Mensaje enviado con éxito!</p>
         </div>
 
-        <h2 class="text-3xl font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
+        <h2 class=" font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
         <form id="contactForm" action="/contact" method="POST"
             class="max-w-lg mx-auto bg-white bg-opacity-80 p-6 shadow-lg rounded-lg">
             <label for="name" class="block text-left">Nombre</label>
@@ -309,43 +369,59 @@
 
     <footer class="bg-[#222725] text-white py-10">
         <div class="container mx-auto px-6">
+            <!-- Contenido Principal del Footer -->
             <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-
-                <div class="flex items-center justify-center md:justify-start space-x-3">
+                <!-- Logo -->
+                <div class="flex items-center justify-center md:justify-start">
                     <img src="./img/icono_arcana.png" alt="Logo Arcana" class="h-20">
-
                 </div>
+
+                <!-- Redes Sociales -->
                 <div class="flex space-x-6 justify-center md:justify-end">
-                    <!-- Facebook -->
                     <a href="https://facebook.com" target="_blank"
                         class="text-white hover:text-[#3C4A28] transition-colors duration-300">
                         <i class="fab fa-facebook-f text-2xl"></i>
                     </a>
-
-                    <!-- Twitter -->
                     <a href="https://twitter.com" target="_blank"
                         class="text-white hover:text-[#3C4A28] transition-colors duration-300">
                         <i class="fab fa-twitter text-2xl"></i>
                     </a>
-
-                    <!-- Instagram -->
                     <a href="https://instagram.com" target="_blank"
                         class="text-white hover:text-[#3C4A28] transition-colors duration-300">
                         <i class="fab fa-instagram text-2xl"></i>
                     </a>
-
-                    <!-- Google Play -->
                     <a href="https://play.google.com" target="_blank"
                         class="text-white hover:text-[#3C4A28] transition-colors duration-300">
                         <i class="fab fa-google-play text-2xl"></i>
                     </a>
                 </div>
             </div>
+
+            <!-- Secciones del Menú en Columna y Centrado -->
+            <div class="mt-8 flex flex-col items-center">
+                <ul class="flex flex-col items-center space-y-3">
+                    <li><a href="#Inicio" class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Inicio</a>
+                    </li>
+                    <li><a href="#ComoFunciona" class="text-gray-300 hover:text-[#3C4A28] transition duration-300">¿Cómo
+                            funciona?</a></li>
+                    <li><a href="#Características"
+                            class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Características</a></li>
+                    <li><a href="#Preguntas"
+                            class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Preguntas frecuentes</a>
+                    </li>
+                    <li><a href="#Contacto"
+                            class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Derechos Reservados -->
             <div class="mt-6 text-center text-gray-400">
                 <p class="text-sm">&copy; 2024 Arcana. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+
 
     <script src="js/script.js"></script>
 </body>
