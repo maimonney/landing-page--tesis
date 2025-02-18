@@ -56,7 +56,6 @@
         });
     </script>
 
-
     <!-- Banner -->
     <section class="relative bg-cover bg-center text-white" id="Inicio"
         style="background-image: url('./img/banner_landing.jpg'); height: 100vh;">
@@ -76,9 +75,6 @@
         </div>
     </section>
 
-
-
-
     <!-- Info -->
     <section class="py-5 mt-10 mb-10 flex items-center justify-center space-x-12" id="ComoFunciona">
         <div>
@@ -95,9 +91,7 @@
         </div>
     </section>
 
-
     </section>
-
 
     <!-- Caracteristicas -->
     <section class="py-16 mt-32 text-center bg-cover bg-center bg-fixed relative" id="Características"
@@ -138,152 +132,153 @@
         </div>
     </section>
 
+    <!--Preguntas frecuentes-->
+    <section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
+        <h2 class="text-3xl text-[#3C4A28] mb-6">Preguntas Frecuentes</h2>
+        <div class="section-ajustada">
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-[#475c54]">
+                <button onclick="toggleAccordion(1)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>1. ¿Qué es Arcana?</h3>
+                    <span id="icon-1" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Arcana es una aplicación diseñada para facilitar la planificación y exploración de viajes por
+                        Argentina. Ofrece herramientas para descubrir destinos, reservar vuelos, alojamientos y
+                        actividades,
+                        todo en un solo lugar. Además, te permite interactuar con los lugares a través de realidad
+                        aumentada.
+                    </p>
+                </div>
+            </div>
 
+            <!-- Accordion Item 2 -->
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(2)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>2. ¿Cómo puedo descargar Arcana?</h3>
+                    <span id="icon-2" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Podés descargar Arcana de forma gratuita desde la App Store (para iOS) o Google Play (para
+                        Android).
+                        Solo buscá "Arcana" y comenzá a explorar.
+                    </p>
+                </div>
+            </div>
 
- <!--Preguntas frecuentes-->
-<section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
-    <h2 class="text-3xl text-[#3C4A28] mb-6">Preguntas Frecuentes</h2>
-    <div class="section-ajustada">
-        <!-- Accordion Item 1 -->
-        <div class="border-b border-[#475c54]">
-            <button onclick="toggleAccordion(1)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>1. ¿Qué es Arcana?</h3>
-                <span id="icon-1" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    Arcana es una aplicación diseñada para facilitar la planificación y exploración de viajes por
-                    Argentina. Ofrece herramientas para descubrir destinos, reservar vuelos, alojamientos y actividades,
-                    todo en un solo lugar. Además, te permite interactuar con los lugares a través de realidad aumentada.
-                </p>
+            <!-- Accordion Item 3 -->
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(3)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>3. ¿Arcana está disponible solo en Argentina?</h3>
+                    <span id="icon-3" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, Arcana está enfocada en destinos turísticos dentro de Argentina, ayudándote a descubrir y
+                        planificar viajes por todo el país.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(4)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>4. ¿Necesito una conexión a Internet para usar Arcana?</h3>
+                    <span id="icon-4" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, para buscar destinos, realizar reservas o interactuar con la realidad aumentada se requiere
+                        conexión a Internet. Sin embargo, algunas funciones, como la consulta de destinos previamente
+                        guardados, pueden estar disponibles sin conexión.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5 -->
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(5)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>5. ¿Arcana me ayuda a reservar vuelos y alojamiento?</h3>
+                    <span id="icon-5" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, Arcana te permite reservar vuelos, alojamiento y actividades todo en un mismo lugar,
+                        simplificando el proceso de planificación de tu viaje.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 6 -->
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(6)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>6. ¿Qué es la realidad aumentada en Arcana?</h3>
+                    <span id="icon-6" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        La realidad aumentada en Arcana permite interactuar con los destinos de manera innovadora, como
+                        visualizar información histórica sobre un lugar apuntando con tu cámara o explorar rutas de
+                        trekking en un mapa interactivo.
+                    </p>
+                </div>
             </div>
         </div>
-
-        <!-- Accordion Item 2 -->
-        <div class="border-b border-[#222725]">
-            <button onclick="toggleAccordion(2)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>2. ¿Cómo puedo descargar Arcana?</h3>
-                <span id="icon-2" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    Podés descargar Arcana de forma gratuita desde la App Store (para iOS) o Google Play (para Android).
-                    Solo buscá "Arcana" y comenzá a explorar.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion Item 3 -->
-        <div class="border-b border-[#222725]">
-            <button onclick="toggleAccordion(3)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>3. ¿Arcana está disponible solo en Argentina?</h3>
-                <span id="icon-3" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    Sí, Arcana está enfocada en destinos turísticos dentro de Argentina, ayudándote a descubrir y
-                    planificar viajes por todo el país.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion Item 4 -->
-        <div class="border-b border-[#222725]">
-            <button onclick="toggleAccordion(4)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>4. ¿Necesito una conexión a Internet para usar Arcana?</h3>
-                <span id="icon-4" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    Sí, para buscar destinos, realizar reservas o interactuar con la realidad aumentada se requiere
-                    conexión a Internet. Sin embargo, algunas funciones, como la consulta de destinos previamente
-                    guardados, pueden estar disponibles sin conexión.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion Item 5 -->
-        <div class="border-b border-[#222725]">
-            <button onclick="toggleAccordion(5)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>5. ¿Arcana me ayuda a reservar vuelos y alojamiento?</h3>
-                <span id="icon-5" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    Sí, Arcana te permite reservar vuelos, alojamiento y actividades todo en un mismo lugar,
-                    simplificando el proceso de planificación de tu viaje.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion Item 6 -->
-        <div class="border-b border-[#222725]">
-            <button onclick="toggleAccordion(6)"
-                class="w-full flex justify-between items-center py-5 text-[#222725]">
-                <h3>6. ¿Qué es la realidad aumentada en Arcana?</h3>
-                <span id="icon-6" class="text-[#222725] transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <p class="pb-5 text-sm text-left text-black">
-                    La realidad aumentada en Arcana permite interactuar con los destinos de manera innovadora, como
-                    visualizar información histórica sobre un lugar apuntando con tu cámara o explorar rutas de
-                    trekking en un mapa interactivo.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <section class="py-12 text-center relative bg-image-fondo" id="Contacto">
-         <!-- Mensaje de éxito -->
-         <div id="successMessage"
-         class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden">
-         <p>¡Mensaje enviado con éxito!</p>
-     </div>
+        <!-- Mensaje de éxito -->
+        <div id="successMessage"
+            class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden">
+            <p>¡Mensaje enviado con éxito!</p>
+        </div>
 
-      <h2 class="text-3xl font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
+        <h2 class="text-3xl font-semibold text-[#3C4A28] mb-6">Contáctanos</h2>
         <form id="contactForm" action="/contact" method="POST"
             class="max-w-lg mx-auto bg-white bg-opacity-80 p-6 shadow-lg rounded-lg">
             <label for="name" class="block text-left">Nombre</label>
@@ -297,18 +292,18 @@
             <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
                 required></textarea>
 
-           <!-- Spinner -->
-           <div id="spinner" class="hidden spinner-container">
-            <div class="spinner"></div>
-        </div>
-        <!-- Botón Enviar -->
-        <div class="mt-4">
-            <button type="submit"
-                class="bg-[#3C4A28] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-[#788B69]">
-                Enviar
-            </button>
-        </div>
-        
+            <!-- Spinner -->
+            <div id="spinner" class="hidden spinner-container">
+                <div class="spinner"></div>
+            </div>
+            <!-- Botón Enviar -->
+            <div class="mt-4">
+                <button type="submit"
+                    class="bg-[#3C4A28] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-[#788B69]">
+                    Enviar
+                </button>
+            </div>
+
         </form>
     </section>
 
@@ -351,7 +346,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="js/script.js"></script>
 </body>
