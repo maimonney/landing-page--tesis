@@ -31,30 +31,51 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header id="main-header"
         class="fixed top-0 left-0 right-0 bg-transparent text-white py-4 z-50 transition duration-300">
         <nav class="container mx-auto flex items-center justify-between px-6">
+            <!-- Logo -->
             <div class="flex items-center">
                 <a href="#Inicio">
                     <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png"
                         alt="Logo de Arcana" class="h-12">
                 </a>
             </div>
-            <ul class="flex items-center space-x-6">
-                <li><a href="#Inicio" class="hover:text-[#788B69] transition duration-300">Inicio</a></li>
-                <li><a href="#ComoFunciona" class="hover:text-[#788B69] transition duration-300">¿Cómo funciona?</a>
-                </li>
-                <li><a href="#Características" class="hover:text-[#788B69] transition duration-300">Características</a>
-                </li>
-                <li><a href="#Preguntas" class="hover:text-[#788B69] transition duration-300">Preguntas frecuentes</a>
-                </li>
-                <li><a href="#Contacto" class="hover:text-[#788B69] transition duration-300">Contacto</a></li>
-                <li>
-                    <button
-                        class="px-6 py-3 font-semibold text-white bg-[#3C4A28] rounded-full hover:bg-[#788B69] transition duration-300">Descarga
-                    </button>
-                </li>
-            </ul>
+            <!-- Menú hamburguesa -->
+            <button id="menu-toggle" class="block sm:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Menú -->
+            <div id="menu"
+                class="hidden sm:flex items-center space-x-6 bg-[#3C4A28] sm:bg-transparent fixed top-0 right-0 h-full w-64 z-50 transform transition-transform duration-300 translate-x-full">
+                <!-- Botón de cierre (X) -->
+                <button id="menu-close" class="block sm:hidden text-white absolute top-4 right-4">
+                    <i class="fas fa-times"></i>
+                </button>
+                <!-- Enlaces del menú -->
+                <ul class="mt-16 w-full"> <!-- Añadimos margen superior para evitar superposición -->
+                    <li><a href="#Inicio"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4">Inicio</a></li>
+                    <li><a href="#ComoFunciona"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4">¿Cómo funciona?</a>
+                    </li>
+                    <li><a href="#Características"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4">Características</a>
+                    </li>
+                    <li><a href="#Preguntas"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4">Preguntas
+                            frecuentes</a></li>
+                    <li><a href="#Contacto"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4">Contacto</a></li>
+                    <li>
+                        <button
+                            class="px-6 py-3 font-semibold text-white bg-[#3C4A28] rounded-full hover:bg-[#788B69] transition duration-300 w-full mt-4">
+                            Descarga
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
