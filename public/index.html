@@ -7,33 +7,48 @@
     <meta name="description" content="Promociona tu app para el control del tratamiento del TOC.">
     <title>Arcana</title>
     <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="/img/icono_arcana.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Agrega Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            transition: all 0.3s ease;
+        }
+
+        header.bg-black {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        section {
+            scroll-margin-top: 120px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
     <header id="main-header"
         class="fixed top-0 left-0 right-0 bg-transparent text-white py-4 z-50 transition duration-300">
         <nav class="container mx-auto flex items-center justify-between px-6">
-            <!-- Logo -->
             <div class="flex items-center">
                 <a href="#Inicio">
                     <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png"
                         alt="Logo de Arcana" class="h-12">
                 </a>
             </div>
-            <!-- Menú -->
             <ul class="flex items-center space-x-6">
                 <li><a href="#Inicio" class="hover:text-[#788B69] transition duration-300">Inicio</a></li>
                 <li><a href="#ComoFunciona" class="hover:text-[#788B69] transition duration-300">¿Cómo funciona?</a>
-                <li><a href="#Características" class="hover:text-[#788B69] transition duration-300">Características</a>
-                <li><a href="#Preguntas" class="hover:text-[#788B69] transition duration-300">Preguntas frecuentes</a>
-                <li><a href="#Contacto" class="hover:text-[#788B69] transition duration-300">Contacto</a>
                 </li>
+                <li><a href="#Características" class="hover:text-[#788B69] transition duration-300">Características</a>
+                </li>
+                <li><a href="#Preguntas" class="hover:text-[#788B69] transition duration-300">Preguntas frecuentes</a>
+                </li>
+                <li><a href="#Contacto" class="hover:text-[#788B69] transition duration-300">Contacto</a></li>
                 <li>
                     <button
                         class="px-6 py-3 font-semibold text-white bg-[#3C4A28] rounded-full hover:bg-[#788B69] transition duration-300">Descarga
@@ -43,10 +58,9 @@
         </nav>
     </header>
 
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Header con scroll
+
             const header = document.getElementById('main-header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -55,25 +69,8 @@
                     header.classList.remove('bg-opacity-70', 'bg-black');
                 }
             });
-
-            // Menú hamburguesa
-            const menuToggle = document.getElementById('menu-toggle');
-            const menu = document.getElementById('menu');
-            const menuClose = document.getElementById('menu-close');
-
-            // Abrir el menú
-            menuToggle.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                menu.classList.toggle('menu-open'); // Agrega o quita la clase "menu-open"
-            });
-
-            // Cerrar el menú
-            menuClose.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menu.classList.remove('menu-open'); // Oculta el menú
-            });
         });
-        // Acordeón
+
         function toggleAccordion(index) {
             const content = document.getElementById('content-' + index);
             const icon = document.getElementById('icon-' + index);
@@ -88,33 +85,23 @@
                 icon.classList.remove('rotate-180');
             }
         }
-
     </script>
 
-
-    <!-- Banner -->
     <section class="relative bg-cover bg-center text-white" id="Inicio"
         style="background-image: url('./img/banner_landing.jpg'); height: 100vh;">
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         <div class="relative flex flex-col justify-center items-center h-full px-12">
-
-            <!-- Texto centrado -->
             <h1 class=" mb-4 text-center">Arcana</h1>
             <p class="text-lg max-w-lg mb-6 text-center leading-relaxed">
                 Descubrí los secretos mejor guardados de Argentina. Explora destinos únicos y vive experiencias
                 inolvidables con Arcana.
             </p>
             <button class="px-8 py-4 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69] 
-            transition duration-300">
-                Descarga ahora
-            </button>
+            transition duration-300"><a href="#ComoFunciona" class="hover:text-[#788B69] transition duration-300">Saber
+                    más</a></button>
         </div>
     </section>
 
-
-
-
-    <!-- Info -->
     <section
         class="py-5 mt-10 mb-10 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12"
         id="ComoFunciona">
@@ -126,17 +113,16 @@
                 a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple y
                 divertido.
             </p>
+            <button class="px-8 py-4 font-semibold text-white rounded-full bg-[#3C4A28] hover:bg-[#788B69] 
+            transition duration-300">
+                Descarga ahora
+            </button>
         </div>
         <div class="sm:w-1/2 max-w-xs">
             <img src="./img/pantallas.png" alt="Celular" class="w-full">
         </div>
     </section>
 
-
-
-
-
-    <!-- Caracteristicas -->
     <section class="py-16 mt-32 text-center bg-cover bg-center bg-fixed relative" id="Características"
         style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1');">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -144,7 +130,7 @@
         <div class="relative container mx-auto text-center mb-32 mt-32">
             <h2 class=" text-white mb-20">Características</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Tarjeta 1 -->
+
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
                     <div class="flex justify-center mb-6">
@@ -158,7 +144,6 @@
                         los más populares hasta los más ocultos.</p>
                 </div>
 
-                <!-- Tarjeta 2 -->
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
                     <div class="flex justify-center mb-6">
@@ -172,7 +157,6 @@
                         organizado para ti.</p>
                 </div>
 
-                <!-- Tarjeta 3 -->
                 <div
                     class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
                     <div class="flex justify-center mb-6">
@@ -188,15 +172,10 @@
         </div>
     </section>
 
-
-
-
-
-    <!--Preguntas frecuentes-->
     <section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
         <h2 class=" text-[#3C4A28] mb-6">Preguntas Frecuentes</h2>
         <div class="section-ajustada">
-            <!-- Accordion Item 1 -->
+
             <div class="border-b border-[#475c54]">
                 <button onclick="toggleAccordion(1)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -220,7 +199,6 @@
                 </div>
             </div>
 
-            <!-- Accordion Item 2 -->
             <div class="border-b border-[#222725]">
                 <button onclick="toggleAccordion(2)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -242,7 +220,6 @@
                 </div>
             </div>
 
-            <!-- Accordion Item 3 -->
             <div class="border-b border-[#222725]">
                 <button onclick="toggleAccordion(3)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -263,7 +240,6 @@
                 </div>
             </div>
 
-            <!-- Accordion Item 4 -->
             <div class="border-b border-[#222725]">
                 <button onclick="toggleAccordion(4)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -285,7 +261,6 @@
                 </div>
             </div>
 
-            <!-- Accordion Item 5 -->
             <div class="border-b border-[#222725]">
                 <button onclick="toggleAccordion(5)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -306,7 +281,6 @@
                 </div>
             </div>
 
-            <!-- Accordion Item 6 -->
             <div class="border-b border-[#222725]">
                 <button onclick="toggleAccordion(6)"
                     class="w-full flex justify-between items-center py-5 text-[#222725]">
@@ -330,7 +304,6 @@
         </div>
     </section>
 
-
     <section class="py-12 text-center relative bg-image-fondo" id="Contacto">
         <!-- Mensaje de éxito -->
         <div id="successMessage"
@@ -352,11 +325,10 @@
             <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
                 required></textarea>
 
-            <!-- Spinner -->
             <div id="spinner" class="hidden spinner-container">
                 <div class="spinner"></div>
             </div>
-            <!-- Botón Enviar -->
+
             <div class="mt-4">
                 <button type="submit"
                     class="bg-[#3C4A28] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-[#788B69]">
@@ -369,14 +341,13 @@
 
     <footer class="bg-[#222725] text-white py-10">
         <div class="container mx-auto px-6">
-            <!-- Contenido Principal del Footer -->
+
             <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-                <!-- Logo -->
+
                 <div class="flex items-center justify-center md:justify-start">
                     <img src="./img/icono_arcana.png" alt="Logo Arcana" class="h-20">
                 </div>
 
-                <!-- Redes Sociales -->
                 <div class="flex space-x-6 justify-center md:justify-end">
                     <a href="https://facebook.com" target="_blank"
                         class="text-white hover:text-[#3C4A28] transition-colors duration-300">
@@ -397,7 +368,6 @@
                 </div>
             </div>
 
-            <!-- Secciones del Menú en Columna y Centrado -->
             <div class="mt-8 flex flex-col items-center">
                 <ul class="flex flex-col items-center space-y-3">
                     <li><a href="#Inicio" class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Inicio</a>
@@ -414,14 +384,11 @@
                 </ul>
             </div>
 
-            <!-- Derechos Reservados -->
             <div class="mt-6 text-center text-gray-400">
                 <p class="text-sm">&copy; 2024 Arcana. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
-
 
     <script src="js/script.js"></script>
 </body>
