@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arcana - Reserva tus viajes con facilidad">
+    <meta property="og:title" content="Arcana" />
+    <meta property="og:description" content="Reserva tus viajes con facilidad" />
+    <meta property="og:image" content="https://arcanatur.ar/img/icon_512x512.png" />
+    <meta property="og:url" content="https://arcanatur.ar" />
+    <meta property="og:type" content="website" />
+
+    <title>Arcana</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/icono_arcana.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 w-full text-white z-50 transition duration-300">
+        <nav class="container max-w-[1200px] mx-auto flex items-center justify-between px-6 mt-6 mb-6 lg:mt-6">
+
+            <div class="flex items-center flex-shrink-0 min-w-[150px]">
+                <a href="#Inicio">
+                    <img src="https://res.cloudinary.com/dys46tr9d/image/upload/v1731684901/isologo-blanco_v7i4l8.png"
+                        alt="Logo de Arcana" class="h-12">
+                </a>
+            </div>
+
+            <button id="menu-toggle" aria-label="Abrir menú" class="block lg:hidden text-white ml-auto">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div id="menu" class="hidden lg:flex items-center justify-center relative">
+                <button id="menu-close" aria-label="Cerrar menú"
+                    class="block lg:hidden text-white absolute top-4 right-4">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <ul class="w-full flex flex-col lg:flex-row flex-grow mt-16 lg:mt-4">
+                    <li>
+                        <a href="#Inicio"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4 whitespace-nowrap">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ComoFunciona"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4 whitespace-nowrap">
+                            ¿Cómo funciona?
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Características"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4 whitespace-nowrap">
+                            Características
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Preguntas"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4 whitespace-nowrap">
+                            Preguntas frecuentes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Contacto"
+                            class="hover:text-[#788B69] transition duration-300 block py-2 px-4 whitespace-nowrap">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="w-full flex justify-center">
+                        <a href="https://front-vue-omega.vercel.app" class="px-4 py-2 font-semibold text-white flex items-center justify-center text-center bg-[#3C4A28] rounded
+                    hover:bg-[#788B69] transition duration-300 w-full">
+                            Descargá
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="socialNav" class="flex space-x-6 justify-center lg:hidden md:justify-end mt-auto mb-4">
+                    <a href="https://facebook.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://play.google.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-google-play text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative bg-cover bg-center text-[#222725] before:absolute before:inset-0 before:bg-black/40"
+        id="Inicio" style="background-image: url('./img/banner_landing.jpg'); height: 100vh; margin-top: -50px;">
+
+        <div class="absolute inset-x-0 top-1/3 text-center">
+            <h1 class="text-[40px] sm:text-[40px] md:text-[100px] font-bold text-[#F7F5EB]">Arcana</h1>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 z-10 w-full" id="curva">
+            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto"
+                viewBox="0 0 1719.37 574.95">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #fff;
+                        }
+                    </style>
+                </defs>
+                <path class="cls-1"
+                    d="M-213.54,389.6s59.39,381.03,77.71,422.68l2132.82-58.67s432.32-194.51-64-442.67c-309.33-154.67-619.96,13.65-829.33,37.33C655.67,398.95,152.24,71.02-149.67,278.95c-86.68,59.7-63.87,110.65-63.87,110.65Z" />
+            </svg>
+
+            <div
+                class="absolute inset-0 flex flex-col justify-end items-center h-auto px-6 sm:px-12 text-center z-20 mb-8">
+                <div class="text-lg sm:text-xl max-w-2xl leading-relaxed">
+                    <p>Descubrí los secretos mejor guardados de Argentina.</p>
+                    <p>Explorá destinos únicos y viví experiencias inolvidables con <strong>Arcana</strong>.</p>
+                </div>
+                <button class="mt-6 px-4 py-2 font-semibold text-white flex items-center justify-center rounded bg-[#3C4A28] hover:bg-[#788B69] 
+            transition duration-300 shadow-lg">
+                    <a href="#ComoFunciona" class="hover:text-[#f7f7f7] transition duration-300">Saber más</a>
+                </button>
+            </div>
+            <div class="w-full bg-white" id="afterSvgBlock" style="display: block;"></div>
+        </div>
+    </section>
+
+    <script>
+        function updateBlockHeight() {
+            const afterSvgBlock = document.getElementById('afterSvgBlock');
+
+            afterSvgBlock.style.display = 'block';
+
+            if (window.innerWidth < 500) {
+                afterSvgBlock.style.height = '220px';
+            } else if (window.innerWidth >= 500 && window.innerWidth < 1200) {
+                afterSvgBlock.style.height = '120px';
+            } else if (window.innerWidth >= 1200) {
+                afterSvgBlock.style.height = '15px';
+            }
+        }
+
+        window.addEventListener('resize', updateBlockHeight);
+        window.addEventListener('load', updateBlockHeight);
+    </script>
+
+    <section
+        class="py-5 mt-10 mb-10 flex flex-col md:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12"
+        id="ComoFunciona">
+        <div class="md:w-1/2 px-4">
+            <h2
+                class="text-2xl sm:text-4xl md:text-[50px] text-[#3C4A28] mb-6 text-left font-semibold leading-normal sm:leading-relaxed">
+                ¿Cómo funciona la app?
+            </h2>
+
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed tracking-wide max-w-xl sm:mx-0 mb-12">
+                <strong>Arcana</strong> es tu compañero ideal para que explorés Argentina de una manera única y
+                emocionante.
+                Desde los paisajes más impresionantes hasta los destinos menos conocidos, nuestra app te ayuda
+                a descubrir cada rincón del país con facilidad. Planificar tu próximo viaje nunca fue tan simple ni tan
+                divertido.
+            </p>
+            <a href="https://front-vue-omega.vercel.app" class="px-4 py-2 font-semibold text-white rounded bg-[#3C4A28] hover:bg-[#788B69] 
+            transition duration-300">
+                Descargá ahora
+            </a>
+        </div>
+        <div class="sm:w-1/2 max-w-xs">
+            <img src="./img/pantallas.png" alt="Celular" class="w-full">
+        </div>
+    </section>
+
+    <section class="py-16 mt-32 text-center bg-cover bg-center bg-fixed relative" id="Características"
+        style="background-image: url('https://i0.wp.com/vacacionesporargentina.com/wp-content/uploads/2020/11/waterfall-5040210_1920.jpg?fit=1920%2C1272&ssl=1');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <div class="relative container mx-auto text-center mb-32 mt-32">
+            <h2
+                class="text-2xl sm:text-4xl md:text-[50px] text-[#eceeea] mb-6 text-center font-semibold leading-normal sm:leading-relaxed">
+                Características</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-map-marked-alt text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Descubrir destinos</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed text-left">Explorá una amplia variedad de lugares,
+                        desde los más populares hasta los más ocultos.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-plane text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Reservar todo en un solo lugar
+                    </h3>
+                    <p class="text-gray-700 text-lg leading-relaxed text-left">Vuelos, alojamientos y actividades, todo
+                        organizado para vos.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 shadow-lg rounded-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#3C4A28] rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-xl text-[#3C4A28] mb-4 text-center">Apoyar el turismo local</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed text-left">Trabajamos con empresas argentinas para
+                        ofrecerte experiencias auténticas y ayudar al crecimiento de las comunidades locales.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 text-center bg-[#eceeea]" id="Preguntas">
+        <h2
+            class="text-2xl sm:text-4xl md:text-[50px] text-[#3C4A28] mb-6 text-center font-semibold leading-normal sm:leading-relaxed">
+            Preguntas frecuentes</h2>
+        <div class="section-ajustada">
+
+            <div class="border-b border-[#475c54]">
+                <button onclick="toggleAccordion(1)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>1. ¿Qué es <strong>Arcana</strong>?</h3>
+                    <span id="icon-1" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        <strong>Arcana</strong> es una aplicación diseñada para facilitar la planificación y exploración de viajes por 
+                        Argentina. Ofrece herramientas para descubrir destinos, reservar vuelos, alojamientos y 
+                        actividades, todo en un solo lugar.
+                    </p>                    
+                </div>
+            </div>
+
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(2)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>2. ¿Cómo puedo descargar <strong>Arcana</strong>?</h3>
+                    <span id="icon-2" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Podés acceder <strong>Arcana</strong> directamente desde nuestra landing.
+                    </p>                   
+                </div>
+            </div>
+
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(3)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>3. ¿<strong>Arcana</strong> está disponible solo en Argentina?</h3>
+                    <span id="icon-3" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, <strong>Arcana</strong> está enfocada en destinos turísticos dentro de Argentina, ayudándote a descubrir y
+                        planificar viajes por todo el país.
+                    </p>                    
+                </div>
+            </div>
+
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(4)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>4. ¿Necesito una conexión a Internet para usar <strong>Arcana</strong>?</h3>
+                    <span id="icon-4" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, para buscar destinos, realizar reservas o interactuar se requiere conexión a Internet. Sin embargo, algunas funciones, como la consulta de destinos previamente guardados, pueden estar disponibles sin conexión.
+                    </p>                    
+                </div>
+            </div>
+
+            <div class="border-b border-[#222725]">
+                <button onclick="toggleAccordion(5)"
+                    class="w-full flex justify-between items-center py-5 text-[#222725]">
+                    <h3>5. ¿<strong>Arcana</strong> me ayuda a reservar vuelos y alojamiento?</h3>
+                    <span id="icon-5" class="text-[#222725] transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <p class="pb-5 text-sm text-left text-black">
+                        Sí, <strong>Arcana</strong> te permite reservar vuelos, alojamiento y actividades todo en un mismo lugar,
+                        simplificando el proceso de planificación de tu viaje.
+                    </p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 text-center relative bg-image-fondo" id="Contacto">
+
+        <div id="successMessage"
+            class="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-[#788B69] text-white rounded-lg shadow-lg hidden z-50">
+            <p>¡Mensaje enviado con éxito!</p>
+        </div>
+    
+        <h2
+            class="text-2xl sm:text-4xl md:text-[50px] text-[#3C4A28] mb-6 text-center font-semibold leading-normal sm:leading-relaxed">
+            Contáctanos</h2>
+        <form id="contactForm" action="/contact" method="POST"
+            class="max-w-lg mx-auto bg-white bg-opacity-80 p-6 shadow-lg rounded-lg">
+            <label for="name" class="block text-left">Nombre</label>
+            <input type="text" id="name" name="name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
+    
+            <label for="email" class="block text-left">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
+                required>
+    
+            <label for="message" class="block text-left">Mensaje</label>
+            <textarea id="message" name="message" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
+                required></textarea>
+    
+            <div class="mt-4">
+                <button type="submit" id="sendButton"
+                    class="bg-[#3C4A28] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-[#788B69]">
+                    <div class="button-content">
+                        <span id="buttonText">Enviar</span>
+                        <div id="spinner" class="spinner hidden"></div>
+                    </div>
+                </button>
+            </div>
+    
+        </form>
+    </section>    
+
+    <footer class="bg-[#222725] text-white py-10">
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+
+                <div class="flex items-center justify-center md:justify-start">
+                    <img src="./img/icono_arcana.png" alt="Logo Arcana" class="h-20">
+                </div>
+
+                <div class="mt-8 flex flex-col items-center">
+                    <ul class="flex flex-col items-center space-y-3">
+                        <li><a href="#Inicio"
+                                class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Inicio</a>
+                        </li>
+                        <li><a href="#ComoFunciona"
+                                class="text-gray-300 hover:text-[#3C4A28] transition duration-300">¿Cómo
+                                funciona?</a></li>
+                        <li><a href="#Características"
+                                class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Características</a>
+                        </li>
+                        <li><a href="#Preguntas"
+                                class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Preguntas
+                                frecuentes</a>
+                        </li>
+                        <li><a href="#Contacto"
+                                class="text-gray-300 hover:text-[#3C4A28] transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex space-x-6 justify-center md:justify-end">
+                    <a href="https://facebook.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://play.google.com" target="_blank"
+                        class="text-white hover:text-[#3C4A28] transition-colors duration-300">
+                        <i class="fab fa-google-play text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center text-gray-400">
+                <p class="text-sm">&copy; 2025 Arcana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
